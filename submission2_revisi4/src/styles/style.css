@@ -1,0 +1,423 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #7c63b8;
+  text-transform: uppercase;
+  font-size: 20px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-img.jpg');
+  background-position: center;
+  background-color: green;
+
+}
+
+.hero_inner {
+  margin: 0 auto;
+  max-width: 800px;
+  background: transparent;
+}
+
+.hero_title {
+  color: floralwhite;
+  font-style: oblique;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 36px;
+  background: transparent;
+}
+
+.hero_tagline {
+  color: floralwhite;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  background: transparent;
+}
+
+/*
+  Main Content
+*/
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+
+/*
+  restaurant
+*/
+
+.restaurant {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/*
+  resto Item
+*/
+
+.resto-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resto-item__header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.resto-item__header__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resto-item__header__rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resto-item__header__rating p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.resto-item__header__rating__score {
+  font-weight: bold;
+  color: #7c63b8;
+}
+
+.resto-item__content {
+  padding: 20px;
+}
+
+.resto-item__content h3 a{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #7c63b8;
+}
+
+.resto-item__content p {
+  font-size: 16px;
+  color: #000000;
+}
+
+
+
+/*
+  resto
+*/
+.resto__title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.resto__poster {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.resto__info {
+  margin-bottom: 20px;
+}
+
+.resto__info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resto__info p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.resto__overview {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.resto__overview h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resto__overview p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.menu__overview {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* menu list */
+.menu {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.menu__list li {
+  padding: 5px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.drinks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* cust overview */
+
+.cust__overview {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.cust {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.review__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: -45px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.review {
+  font-size: 16px;
+}
+
+
+/*
+  Footer
+*/
+
+footer {
+  padding: 16px;
+}
+
+footer #footerTools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer p {
+  margin-top: 16px;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: #7c63b8;
+  text-decoration: none;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+  Button
+*/
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #7c63b8;
+  border: 1px solid #770000;
+  border-radius: 4px;
+ 
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+ 
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+ 
+.btn:hover {
+  background-color: #7c63b8BB;
+}
+.btn:active {
+  background-color: #7c63b8DD;
+}
+.btn:focus-visible {
+  outline: 3px solid #7c63b855;
+}
+
+a, input, button, textarea {   
+  display: inline-block;   
+  min-width: 44px;   
+  min-height: 44px; 
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #4917bf;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
